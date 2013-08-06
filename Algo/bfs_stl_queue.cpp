@@ -5,9 +5,9 @@
 
 using namespace std;
 
-vector < vector<int> > g(100, vector<int>(100)); // граф
-int n; // число вершин
-int s; // стартовая вершина (вершины везде нумеруются с нуля)
+vector < vector<int> > g(100, vector<int>(100)); // РіСЂР°С„
+int n; // С‡РёСЃР»Рѕ РІРµСЂС€РёРЅ
+int s; // СЃС‚Р°СЂС‚РѕРІР°СЏ РІРµСЂС€РёРЅР° (РІРµСЂС€РёРЅС‹ РІРµР·РґРµ РЅСѓРјРµСЂСѓСЋС‚СЃСЏ СЃ РЅСѓР»СЏ)
 
 void bfs(int s)
 {
@@ -18,7 +18,7 @@ void bfs(int s)
     while (!q.empty()) {
         int v = q.front();
 	    q.pop();
-        cout << v << " ";
+            cout << v << " ";
 	    for (size_t i = 0; i < n; ++i) {
 		    int to = g[v][i];
             
