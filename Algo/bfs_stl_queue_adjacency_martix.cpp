@@ -2,6 +2,8 @@
 #include <queue>
 using namespace std;
 
+// http://en.wikipedia.org/wiki/Incidence_matrix
+
 int n;// число вершин графа
 int mass[1000][1000];//матрица смежности
  
