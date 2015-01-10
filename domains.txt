@@ -1,3 +1,15 @@
 Modular arithmetic
   https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic
   http://en.wikipedia.org/wiki/Modular_exponentiation
+  
+https://www.quora.com/Why-is-the-following-code-of-C++-showing-the-wrong-result-in-the-case-of-x-150-and-y-53  
+As all the other answers say, 150^53 is too big a number for C/C++ to handle. 
+But it seems that you need to calculate ( 150^53 ) mod 10.  ( mod = remainder )
+Ever heard of Fermat's little theorem ?
+You can use it here. 
+if you want to calculate (a^b) % x, 
+can you say, (a^b) % x = { (a%x)^b } % x ?
+If you can, then you see that a%x will be a small number. In your case, 150%10 = 0. And hence the answer is 0. 
+Furthermore,  a^b = a*a^(b-1)
+( a^b )%x = { (a%x) * { ( a^(b-1) )%x } } % x
+You can use this to further simplify the calculation of { (a%x)^b } % x.
