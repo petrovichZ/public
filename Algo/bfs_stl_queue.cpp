@@ -17,19 +17,18 @@ void bfs(int s)
     used[s] = true;
     while (!q.empty()) {
         int v = q.front();
-	    q.pop();
-            cout << v << " ";
-	    for (size_t i = 0; i < n; ++i) {
-		    int to = g[v][i];
+        q.pop();
+        cout << v << " ";
+        for (size_t i = 0; i < n; ++i) {
+            int to = g[v][i];
             
-            if(to < 0)
-                continue;
+            if(to < 0) continue;
             
-		    if (!used[to]) {
-			    used[to] = true;
-			    q.push (to);
-		    }
-	    }
+            if (!used[to]) {
+                used[to] = true;
+                q.push (to);
+            }
+        }
     }
 }
 
